@@ -1,0 +1,21 @@
+<div class='columns is-centered mt-6'>
+  <div class='column is-half is-centered'>
+    <div class='card'>
+      <%= render @entry %>
+      <div class="columns is-mobile">
+        <div class="column has-text-right">
+          <%= link_to "Edit", edit_entry_path(@entry), class: "button is-info has-text-centered" %>
+        </div>
+        <div class="column has-text-left">
+          <%= button_to "Delete", @entry, method: :delete, class: "button is-danger is-inline has-text-centered" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="columns is-centered mt-6"> 
+  <div class="column is-half has-text-centered p-0">
+    <%= link_to "Need Jokes?", jokes_index_path, class: 'button is-link is-outlined is-centered' %>
+  </div>
+</div>

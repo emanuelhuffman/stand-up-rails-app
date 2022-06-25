@@ -1,0 +1,36 @@
+<%= form_with(model: entry) do |form| %>
+  <% if entry.errors.any? %>
+    <div class="message is-danger">
+      <div class="message-header">
+        <p><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</p>
+      </div>
+
+      <div class="message-body">
+        <ul>
+          <% entry.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mic_name, class: "label" %>
+    <%= form.text_field :mic_name, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address, class: "label" %>
+    <%= form.text_field :address, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_show, class: "label" %>
+    <%= form.datetime_field :date_of_show, class: "input" %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'button is-success' %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<div class="columns is-centered mt-6">
+    <div class="column is-half">
+        <% @entries.each do |day, entries| %>
+            <h3 class="is-size-4 has-text-weight-bold mb-2 has-text-centered">Open Mics for <%= day%></h3>
+
+            <div class="mb-5">
+                <% entries.each do |entry| %>
+                    <%= link_to entry_path(entry) do %>
+                        <div class="card">
+                            <div class="card-content has-text-centered">
+                                <strong><%= entry.mic_name %></strong>
+                                <p><%= entry.address %></p>
+                                <p><%= entry.date_of_show.strftime("%B %e, %Y @ %l:%M%p") %></p>
+                                <div class="columns is-mobile mt-2">
+                                   <div class="column has-text-right">
+                                        <%= link_to "Edit", entry_path(entry), class: "button is-info has-text-centered" %>
+                                    </div>
+                                    <div class="column has-text-left">
+                                        <%= button_to "Delete", entry_path(entry), method: :delete, class: "button is-danger is-inline has-text-centered" %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+    </div>
+</div>

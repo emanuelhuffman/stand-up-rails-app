@@ -1,0 +1,23 @@
+<div id="<%= dom_id entry %>">
+  <header class="card-header has-background-info-light">
+    <p class='card-header-title is-size-4 is-centered'><%= entry.mic_name %></p>
+  </header>
+
+  <div class='card-content'>
+    <div class='content has-text-centered'>
+      <p>
+        <span class='has-text-weight-bold'>
+          <strong>Address:</strong>
+          <%= entry.address %>
+        </span>
+      </p>
+
+      <p>
+        <span class='has-text-weight-bold'>
+          <strong>Date of show:</strong>
+          <%= entry.date_of_show.strftime("%B %e, %Y @ %l:%M%p") %>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

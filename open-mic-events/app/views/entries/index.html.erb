@@ -1,0 +1,26 @@
+<% content_for :title do %>
+  Open Mic Events &ndash; <%= DateTime.now.strftime("%B %e, %Y") %>
+<% end %>
+
+<div class="columns mt-3 is-centered is-flex is-flex-wrap-wrap">
+  <% @entries.each do |entry| %>
+  <div class="column is-one-third is-centered">
+    <div class="card m-auto" style="width: 400px;">
+      <%= render entry %>
+      <div class='card-footer'>
+        <p class='m-auto'>
+          <span class='has-text-weight-bold'>
+            <%= link_to "Show Event", entry, class: "card-footer-item" %>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="columns is-centered mt-6"> 
+  <div class="column">
+    <%= link_to "All Events", all_events_index_path, class: 'button is-link is-outlined is-centered' %>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mic_name: MyString
+  address: MyString
+  date_of_show: 2022-06-12 04:53:04
+
+two:
+  mic_name: MyString
+  address: MyString
+  date_of_show: 2022-06-12 04:53:04

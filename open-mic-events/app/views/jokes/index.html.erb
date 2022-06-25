@@ -1,0 +1,10 @@
+<div class="columns is-centered mt-6">
+    <div class="column is-half">
+        <% @jokes.each do |joke| %>
+            <div class='card m-5 p-2 has-background-info-light has-text-weight-medium'>
+                <p class='is-size-4'><%= joke %></p>
+            </div>
+        <% end %>
+    </div>
+</div>
+
