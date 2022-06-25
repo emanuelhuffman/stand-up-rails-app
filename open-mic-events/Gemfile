@@ -71,5 +71,13 @@ group :test do
   gem "webdrivers"
 end
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
 # Filter bad words
 gem 'obscenity'
